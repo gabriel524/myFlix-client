@@ -15,7 +15,7 @@ export function LoginView(props) {
       e.preventDefault()
       props.onRegister(true)
   }
-
+  
   return (
     <form>
       <label>
