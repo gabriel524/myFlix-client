@@ -7,10 +7,11 @@ import './index.scss';
 
 // Main component (will eventually use all the others)
 export class MyFlixApplication extends React.Component {
-
   render() {
     return (
-      <MainView />
+      <container>
+        <MainView />
+      </container>
     );
   }
 }

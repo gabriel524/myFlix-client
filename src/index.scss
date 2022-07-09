@@ -1,5 +1,30 @@
-$color: steelblue;
+$color: #126933 ;
+$color2: #1d91ae ;
+$color3: hwb(0 2% 8%) ;
 
-.my-flix {
-  color: $color;
+body, html {
+
+    background: $color2;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
 }
+
+.app-container {
+    width: 100%;
+    background: $color2;
+}
+.movieViewContainer{
+    background: $color3;
+}
+.main-view nav{
+  list-style: none;
+  background: #bd1e43;
+  padding: 100;
+  margin: 0;
+  width: 100%;
+  margin-top: 0;
+  text-decoration: none;
+  display: block;
+}
+
