@@ -19,16 +19,28 @@ import { Row, Col, Container } from 'react-bootstrap';
       selectedMovie: null
     };
   }
-  componentDidMount(){
-    axios.get('https://myflix--movies-application1.herokuapp.com/movies')
-      .then(response => {
+  componentDidMount() {
+    let accessToken = localStorage.getItem('token');
+    if (accessToken !== null) {
+      this.setState({
+        username: localStorage.getItem('username'),
+      });
+      this.getMovies(accessToken);
+    }
+  }
+  
+  
+  getMovies(token) {
+    axios
+      .get('https://myflix--movies-application1.herokuapp.com/movies', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
         this.setState({
-          movies: response.data
+          movies: response.data,
         });
       })
-      .catch(error => {
-        console.log(error);
-      });
+      .catch((err) => console.log('Error: ' + err));
   }
 
  /*When a movie is clicked, this function is invoked and updates the state of
