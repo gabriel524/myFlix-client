@@ -28,3 +28,28 @@ body, html {
   display: block;
 }
 
+.button{
+  color: blue;
+  border: black;
+  width: fit-content;
+  
+}
+
+.form-container {
+  margin: 10% auto;
+  display: block;
+  text-align:center;
+  padding: 70px;
+  width: 70px;
+}
+
+body{
+  margin: 0 auto;
+  font-family: Arial;
+  background-color: dimgrey;
+  color: white;
+}
+
+.form-container input{
+  margin-bottom:10px;
+}
