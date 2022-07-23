@@ -29160,6 +29160,16 @@ function LoginView(props) {
                                                             },
                                                             __self: this,
                                                             children: usernameErr
+                                                        }),
+                                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                                            id: "emailHelp",
+                                                            class: "form-text",
+                                                            __source: {
+                                                                fileName: "src/components/login-view/login-view.jsx",
+                                                                lineNumber: 95
+                                                            },
+                                                            __self: this,
+                                                            children: "We'll never share your information with anyone."
                                                         })
                                                     ]
                                                 }),
@@ -29167,14 +29177,14 @@ function LoginView(props) {
                                                     controlId: "formPassword",
                                                     __source: {
                                                         fileName: "src/components/login-view/login-view.jsx",
-                                                        lineNumber: 97
+                                                        lineNumber: 98
                                                     },
                                                     __self: this,
                                                     children: [
                                                         /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Form.Label, {
                                                             __source: {
                                                                 fileName: "src/components/login-view/login-view.jsx",
-                                                                lineNumber: 98
+                                                                lineNumber: 99
                                                             },
                                                             __self: this,
                                                             children: "Password"
@@ -29187,7 +29197,7 @@ function LoginView(props) {
                                                             ,
                                                             __source: {
                                                                 fileName: "src/components/login-view/login-view.jsx",
-                                                                lineNumber: 99
+                                                                lineNumber: 100
                                                             },
                                                             __self: this
                                                         }),
@@ -29195,31 +29205,70 @@ function LoginView(props) {
                                                             className: "validation-message",
                                                             __source: {
                                                                 fileName: "src/components/login-view/login-view.jsx",
-                                                                lineNumber: 103
+                                                                lineNumber: 104
                                                             },
                                                             __self: this,
                                                             children: passwordErr
                                                         })
                                                     ]
                                                 }),
-                                                /*#__PURE__*/ _jsxRuntime.jsx("div", {
+                                                /*#__PURE__*/ _jsxRuntime.jsxs("div", {
                                                     className: "button",
                                                     __source: {
                                                         fileName: "src/components/login-view/login-view.jsx",
-                                                        lineNumber: 106
+                                                        lineNumber: 107
                                                     },
                                                     __self: this,
-                                                    children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                                        variant: "primary",
-                                                        type: "submit",
-                                                        onClick: handleSubmit,
-                                                        __source: {
-                                                            fileName: "src/components/login-view/login-view.jsx",
-                                                            lineNumber: 107
-                                                        },
-                                                        __self: this,
-                                                        children: "Submit"
-                                                    })
+                                                    children: [
+                                                        /*#__PURE__*/ _jsxRuntime.jsxs("div", {
+                                                            class: "mb-3 form-check",
+                                                            __source: {
+                                                                fileName: "src/components/login-view/login-view.jsx",
+                                                                lineNumber: 108
+                                                            },
+                                                            __self: this,
+                                                            children: [
+                                                                /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                                                                    type: "checkbox",
+                                                                    class: "form-check-input",
+                                                                    id: "exampleCheck1",
+                                                                    __source: {
+                                                                        fileName: "src/components/login-view/login-view.jsx",
+                                                                        lineNumber: 109
+                                                                    },
+                                                                    __self: this
+                                                                }),
+                                                                /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                                                                    class: "form-check-label",
+                                                                    for: "exampleCheck1",
+                                                                    __source: {
+                                                                        fileName: "src/components/login-view/login-view.jsx",
+                                                                        lineNumber: 110
+                                                                    },
+                                                                    __self: this,
+                                                                    children: /*#__PURE__*/ _jsxRuntime.jsx("span", {
+                                                                        __source: {
+                                                                            fileName: "src/components/login-view/login-view.jsx",
+                                                                            lineNumber: 110
+                                                                        },
+                                                                        __self: this,
+                                                                        children: "Remember Me"
+                                                                    })
+                                                                })
+                                                            ]
+                                                        }),
+                                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                            variant: "primary",
+                                                            type: "submit",
+                                                            onClick: handleSubmit,
+                                                            __source: {
+                                                                fileName: "src/components/login-view/login-view.jsx",
+                                                                lineNumber: 112
+                                                            },
+                                                            __self: this,
+                                                            children: "Submit"
+                                                        })
+                                                    ]
                                                 })
                                             ]
                                         })
@@ -29229,14 +29278,14 @@ function LoginView(props) {
                             /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Footer, {
                                 __source: {
                                     fileName: "src/components/login-view/login-view.jsx",
-                                    lineNumber: 114
+                                    lineNumber: 119
                                 },
                                 __self: this,
                                 children: [
                                     /*#__PURE__*/ _jsxRuntime.jsx("p", {
                                         __source: {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 115
+                                            lineNumber: 120
                                         },
                                         __self: this,
                                         children: "Not Registered?"
@@ -29246,14 +29295,14 @@ function LoginView(props) {
                                         variant: "link",
                                         __source: {
                                             fileName: "src/components/login-view/login-view.jsx",
-                                            lineNumber: 116
+                                            lineNumber: 121
                                         },
                                         __self: this,
                                         children: /*#__PURE__*/ _jsxRuntime.jsx("div", {
                                             className: "singup",
                                             __source: {
                                                 fileName: "src/components/login-view/login-view.jsx",
-                                                lineNumber: 117
+                                                lineNumber: 122
                                             },
                                             __self: this,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx("a", {
@@ -29262,7 +29311,7 @@ function LoginView(props) {
                                                 role: "button",
                                                 __source: {
                                                     fileName: "src/components/login-view/login-view.jsx",
-                                                    lineNumber: 118
+                                                    lineNumber: 123
                                                 },
                                                 __self: this,
                                                 children: "Sign Up"
