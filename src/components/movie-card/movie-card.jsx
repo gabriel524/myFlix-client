@@ -15,10 +15,10 @@ render() {
     <Container fluid className="movieCardContainer">
       <Row className="justify-content-md-center">
       <Col md={8}>
-          <CardGroup>
+          <CardGroup className='card'>
             <Card className="movieCard mt-3 mb-3">
               <Card.Img variant="top" src={movie.ImagePath} />
-              <Card.Body className='mycard'>
+              <Card.Body>
                 <div className='title'>
                 <Card.Title>{movie.Title}</Card.Title>
                 </div>
