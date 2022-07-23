@@ -18,11 +18,13 @@ render() {
           <CardGroup>
             <Card className="movieCard mt-3 mb-3">
               <Card.Img variant="top" src={movie.ImagePath} />
-              <Card.Body>
+              <Card.Body className='mycard'>
+                <div className='title'>
                 <Card.Title>{movie.Title}</Card.Title>
+                </div>
                 <Card.Text>{movie.Description}</Card.Text>
-                <Button onClick={() => onMovieClick(movie)} variant="link">
-                  Click me
+                <Button onClick={() => onMovieClick(movie)} variant="link" id='button'>
+                  Next
                 </Button>
               </Card.Body>
             </Card>
