@@ -88,10 +88,11 @@ const handleSubmit = (e) => {
     <Form id="formstyle">
       <Form.Group controlId="formUsername">
         <Form.Label>Username</Form.Label>
-        <Form.Control type="text" placeholder="Enter your username" 
+        <Form.Control type="text" placeholder="Enter your username"
         value={username} onChange={e => setUsername(e.target.value)} />
         {/* code added here to display validation error */}
         {usernameErr && <p>{usernameErr}</p>}
+        <div id="emailHelp" class="form-text">We'll never share your information with anyone.</div>
         </Form.Group>
 
       <Form.Group controlId="formPassword">
@@ -104,6 +105,10 @@ const handleSubmit = (e) => {
         )}
         </Form.Group>
         <div className='button'>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
+            <label class="form-check-label" for="exampleCheck1"><span>Remember Me</span></label>
+        </div>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
         </Button>
