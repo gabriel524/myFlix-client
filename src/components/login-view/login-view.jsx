@@ -115,7 +115,7 @@ const handleSubmit = (e) => {
     <p>Not Registered?</p>
     <Button className="ma-0 col-10 onset-1" variant="link">
     <div className='singup'>
-    Sign Up
+    <a href="../registration-view" class="btn btn-info" role="button">Sign Up</a>
     </div>
     </Button>
     </Card.Footer>
