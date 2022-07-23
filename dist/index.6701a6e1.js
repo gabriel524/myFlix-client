@@ -29256,7 +29256,17 @@ function LoginView(props) {
                                                 lineNumber: 117
                                             },
                                             __self: this,
-                                            children: "Sign Up"
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx("a", {
+                                                href: "../registration-view",
+                                                class: "btn btn-info",
+                                                role: "button",
+                                                __source: {
+                                                    fileName: "src/components/login-view/login-view.jsx",
+                                                    lineNumber: 118
+                                                },
+                                                __self: this,
+                                                children: "Sign Up"
+                                            })
                                         })
                                     })
                                 ]
@@ -42190,17 +42200,34 @@ class MovieCard extends _reactDefault.default.Component {
                                             __self: this,
                                             children: movie.Description
                                         }),
-                                        /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
-                                            onClick: ()=>onMovieClick(movie)
-                                            ,
-                                            variant: "link",
-                                            id: "button",
+                                        /*#__PURE__*/ _jsxRuntime.jsx("div", {
                                             __source: {
                                                 fileName: "src/components/movie-card/movie-card.jsx",
                                                 lineNumber: 26
                                             },
                                             __self: this,
-                                            children: "Next"
+                                            children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.Button, {
+                                                onClick: ()=>onMovieClick(movie)
+                                                ,
+                                                variant: "link",
+                                                __source: {
+                                                    fileName: "src/components/movie-card/movie-card.jsx",
+                                                    lineNumber: 27
+                                                },
+                                                __self: this,
+                                                children: /*#__PURE__*/ _jsxRuntime.jsx("a", {
+                                                    href: "#",
+                                                    id: "button",
+                                                    class: "btn btn-info",
+                                                    role: "button",
+                                                    __source: {
+                                                        fileName: "src/components/movie-card/movie-card.jsx",
+                                                        lineNumber: 28
+                                                    },
+                                                    __self: this,
+                                                    children: "Next"
+                                                })
+                                            })
                                         })
                                     ]
                                 })

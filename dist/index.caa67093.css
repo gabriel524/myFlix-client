@@ -42,7 +42,6 @@ body, html {
 .justify-content-sm-center {
   margin-top: 150px;
   position: relative;
-  color: hsl(52deg, 73%, 43%);
 }
 
 .title {
@@ -51,8 +50,6 @@ body, html {
 }
 
 #button {
-  border: solid blue;
-  background-color: lightcoral;
   font-size: 16px;
 }
 
