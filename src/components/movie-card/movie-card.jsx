@@ -23,9 +23,11 @@ render() {
                 <Card.Title>{movie.Title}</Card.Title>
                 </div>
                 <Card.Text>{movie.Description}</Card.Text>
-                <Button onClick={() => onMovieClick(movie)} variant="link" id='button'>
-                  Next
+                <div>
+                <Button onClick={() => onMovieClick(movie)} variant="link" >
+                <a href="#" id='button' class="btn btn-info" role="button">Next</a>
                 </Button>
+                </div>
               </Card.Body>
             </Card>
           </CardGroup>
