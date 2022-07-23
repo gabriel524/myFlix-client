@@ -42136,6 +42136,7 @@ class MovieCard extends _reactDefault.default.Component {
                     },
                     __self: this,
                     children: /*#__PURE__*/ _jsxRuntime.jsx(_reactBootstrap.CardGroup, {
+                        className: "card",
                         __source: {
                             fileName: "src/components/movie-card/movie-card.jsx",
                             lineNumber: 18
@@ -42159,7 +42160,6 @@ class MovieCard extends _reactDefault.default.Component {
                                     __self: this
                                 }),
                                 /*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Card.Body, {
-                                    className: "mycard",
                                     __source: {
                                         fileName: "src/components/movie-card/movie-card.jsx",
                                         lineNumber: 21
