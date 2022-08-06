@@ -1,20 +1,18 @@
 import React from "react";
-import { Navbar, Nav, Button } from "react-bootstrap";
-import Container from 'react-bootstrap/Container';
+import './navbar.scss';
+import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
-export function Menubar() {
-  let user = localStorage.getItem("user");
+export default function Navbar({ user }) {
 
-  const handleLogOut = (e) => {
-    e.preventDefault();
+  const onLoggedOut = () => {
     localStorage.clear();
     window.open("/", "_self");
-    props.onLoggedOut(user);
-  };
+  }
 
   const isAuth = () => {
     if (typeof window == "undefined") {
-      return false;
+      return false
     }
     if (localStorage.getItem("token")) {
       return localStorage.getItem("token");
@@ -24,29 +22,40 @@ export function Menubar() {
   };
 
   return (
-      <>
-    <Navbar className="main-nav" sticky="top" bg="dark" expand="lg" variant="dark">
-		<Container>
-		<Navbar.Brand href="/">MoviMe</Navbar.Brand>
-			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ml-auto">
+        <Navbar className="main-nav w-full" sticky="top" expand="lg" variant="dark">
+        <Container className="navbar-container flex">
+          <Navbar.Brand href="#home">MyFlix Movies App</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+				  <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto navbar-elements__style justify-between">
+
             {isAuth() && (
-              <Nav.Link href={`/users/${user}`}>{user}</Nav.Link>
+              <Nav.Link as={Link} to={`/`}>Movies</Nav.Link>
             )}
+
             {isAuth() && (
-              <Button variant="link" onClick={handleLogOut}>Logout</Button>
+              <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
             )}
+
+            {isAuth() && (
+              
+              <Nav.Link onClick={() => onLoggedOut()}>Logout</Nav.Link>
+            )}
+
             {!isAuth() && (
-              <Nav.Link href="/">Login</Nav.Link>
+              <Nav.Link herf="/login">Login</Nav.Link>
             )}
+
             {!isAuth() && (
-              <Nav.Link href="/register">Register</Nav.Link>
+              <Nav.Link herf="/registration-view">Sign Up</Nav.Link>
             )}
+
           </Nav>
-        </Navbar.Collapse>
-		</Container>
-	</Navbar>
-   </>
-)
+          </Navbar.Collapse>
+          
+        </Container>
+      </Navbar>
+  )
 }
+
+

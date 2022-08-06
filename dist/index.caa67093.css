@@ -26,8 +26,8 @@ body, html {
 .w-full {
   max-height: 100%;
   background-color: hwb(300 0% 50%);
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -20px;
+  margin-right: -20px;
   position: absolute;
 }
 
@@ -45,8 +45,10 @@ body, html {
 }
 
 .title {
-  color: #b40571;
+  color: hwb(300 0% 50%);
   text-align: center;
+  margin-bottom: 10px;
+  text-decoration: underline;
 }
 
 #button {
@@ -61,6 +63,36 @@ body, html {
   margin-bottom: 10px;
   color: green;
 }
+
+.cont {
+  background-color: white;
+  margin-top: 130px;
+  position: relative;
+}
+.movie-card {
+  cursor: pointer;
+  transition: all 0.28s;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  width: 15rem;
+  min-height: 12rem;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
 
 
 /*# sourceMappingURL=index.caa67093.css.map */
