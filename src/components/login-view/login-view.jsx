@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import PropTypes from 'prop-types';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 import { Container, Row, Col, Card, Navbar, Nav, Form, Button, NavDropdown } from 'react-bootstrap';
 
@@ -55,32 +55,8 @@ const handleSubmit = (e) => {
 
   return (
     <Container fluid className="mt-12">
-    <Navbar className="w-full" variant="dark">
-      <Container className="flex">
-        <Navbar.Brand href="#home">MyFlix Movies App</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="navbarColor02">
-          <Nav className="justify-between">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-
       <Row className="justify-content-sm-center flex">
-        <Col xs={12} sm={9} md={7} lg={6} xl={5}>
+        <Col xs={12} sm={9} md={7} lg={6} xl={5} className="col-xl-8 col-lg-8 col-md-7 col-sm-9 col-12">
           <Card variant="light" bg="light">
             <Card.Body>
       <div className='form-container'>
@@ -92,10 +68,10 @@ const handleSubmit = (e) => {
         value={username} onChange={e => setUsername(e.target.value)} />
         {/* code added here to display validation error */}
         {usernameErr && <p>{usernameErr}</p>}
-        <div id="emailHelp" class="form-text">We'll never share your information with anyone.</div>
+        <div id="emailHelp" className="form-text">We'll never share your information with anyone.</div>
         </Form.Group>
 
-      <Form.Group controlId="formPassword">
+      <Form.Group controlId="Password">
         <Form.Label>Password</Form.Label>
         <Form.Control type="password" placeholder="Password"
         value={password} onChange={e => setPassword(e.target.value)} />
@@ -105,9 +81,9 @@ const handleSubmit = (e) => {
         )}
         </Form.Group>
         <div className='button'>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-            <label class="form-check-label" for="exampleCheck1"><span>Remember Me</span></label>
+        <div className="mb-3 form-check">
+          <input type="checkbox" className="form-check-input" id="exampleCheck1"></input>
+            <label className="form-check-label"><span>Remember Me</span></label>
         </div>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
@@ -118,11 +94,13 @@ const handleSubmit = (e) => {
     </Card.Body>
     <Card.Footer>
     <p>Not Registered?</p>
-    <Button className="ma-0 col-10 onset-1" variant="link">
-    <div className='singup'>
-    <a href="../registration-view" class="btn btn-info" role="button">Sign Up</a>
-    </div>
+      <Link to="/register">
+      <div className='text'>
+      <Button className="btn btn-info">Sign Up</Button>
+      </div>
+     <Button className="ma-0 col-10 onset-1" variant="link">
     </Button>
+    </Link>
     </Card.Footer>
     </Card>
     </Col>
@@ -130,13 +108,10 @@ const handleSubmit = (e) => {
     </Container>
   )
 }
+
     
 
-LoginView.PropTypes = {
-  onLoggedIn: PropTypes.func.isRequired,
-  Username: PropTypes.string.isRequired,
-  Password: PropTypes.string.isRequired,
-};
+
 
 
 
