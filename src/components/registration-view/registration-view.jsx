@@ -3,8 +3,6 @@ import axios from 'axios';
 import propTypes from 'prop-types';
 import { Container, Row, Col, Card, Form, CardGroup, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-
-
 export function RegistrationView(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -191,7 +189,7 @@ export function RegistrationView(props) {
       </Container>
     );
   }
-
+  
   RegistrationView.propTypes = {
       register: propTypes.shape({
         Username: propTypes.string.isRequired,
