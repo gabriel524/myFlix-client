@@ -1,7 +1,6 @@
 import React from "react";
 import './navbar.scss';
-import { Navbar, Container, Nav, Button } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+import { Navbar, Container, Nav} from 'react-bootstrap';
 
 export default function Navbar({ user }) {
 
