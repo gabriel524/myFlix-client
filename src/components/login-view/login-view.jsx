@@ -94,13 +94,11 @@ const handleSubmit = (e) => {
     </Card.Body>
     <Card.Footer>
     <p>Not Registered?</p>
-      <Link to="/register">
       <div className='text'>
-      <Button className="btn btn-info">Sign Up</Button>
+          <a className="btn btn-info" href={'/register'}>Sign Up</a>
       </div>
      <Button className="ma-0 col-10 onset-1" variant="link">
     </Button>
-    </Link>
     </Card.Footer>
     </Card>
     </Col>

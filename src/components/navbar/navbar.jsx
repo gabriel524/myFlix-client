@@ -24,38 +24,43 @@ export default function Navbar({ user }) {
   return (
         <Navbar className="main-nav w-full" sticky="top" expand="lg" variant="dark">
         <Container className="navbar-container flex">
-          <Navbar.Brand href="#home">MyFlix Movies App</Navbar.Brand>
+          <Navbar.Brand href="/">MyFlix Movies App</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				  <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto navbar-elements__style justify-between">
 
             {isAuth() && (
-              <Nav.Link as={Link} to={`/`}>Movies</Nav.Link>
+              // <Nav.Link as={Link} to={`/`}>Movies</Nav.Link>
+                <Nav.Link href={'/'}>Movies</Nav.Link>
             )}
 
             {isAuth() && (
-              <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
+              // <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
+              < Nav.Link href={`/users/${user}`}>Profile</ Nav.Link>
             )}
 
             {isAuth() && (
-              
+
               <Nav.Link onClick={() => onLoggedOut()}>Logout</Nav.Link>
             )}
 
             {!isAuth() && (
-              <Nav.Link herf="/login">Login</Nav.Link>
+              // <Nav.Link href="/">Login</Nav.Link>
+                <Nav.Link href={'/'}>Login</Nav.Link>
             )}
 
             {!isAuth() && (
-              <Nav.Link herf="/registration-view">Sign Up</Nav.Link>
+              // <Nav.Link href="/register">Sign Up</Nav.Link>
+                <Nav.Link href={'/register'}  variant='Nav.Link'>Sign Up</Nav.Link>
             )}
 
           </Nav>
           </Navbar.Collapse>
-          
+
         </Container>
       </Navbar>
   )
 }
+
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import { Button, Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
-import { Link } from "react-router-dom";
+
 
 import './movie-card.scss';
 
@@ -23,10 +23,9 @@ render() {
             className="poster position-relative" /> {' '}
             <Card.Body>
                 <Card.Title className="card-title mb-2">{movie.Title}</Card.Title>
-              <Link to={`/movies/${movie._id}`}>
-                  <Button className="btn btn-info" role="button" 
-                  variant="error">Open</Button>
-            </Link>
+                <a href={`/movies/${movie._id}`} className="btn btn-info">
+                Open
+            </a>
             </Card.Body>
             </Card>
             </CardGroup>

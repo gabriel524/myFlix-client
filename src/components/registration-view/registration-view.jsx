@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import propTypes from 'prop-types';
 import { Container, Row, Col, Card, Form, CardGroup, Button, Navbar, Nav, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+
 
 
 export function RegistrationView(props) {
@@ -178,13 +178,11 @@ export function RegistrationView(props) {
               </Card.Body>
               <p className='text'>Already registered?</p>
               <Card.Footer className="pr-0 my-0">
-                <Link to="/">
-                <div className='text'>
-                  <Button className="btn btn-info" role="button">Login</Button>
+              <div className='text'>
+                  <a href={'/'} className="btn btn-info" role="button">Login</a>
                   </div>
                   <Button className="col-10 offset-1" variant="link">
                   </Button>
-                </Link>
               </Card.Footer>
             </Card>
             </CardGroup>

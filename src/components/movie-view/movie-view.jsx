@@ -31,9 +31,7 @@ componentDidMount() {
         </div>
 
       <Card.Text className="text-style">Director: {movie.Director.Name}
-        <Link to={`/directors/${movie.Director.Name}`}>
-          <button variant="link">More info</button>
-        </Link>
+      <a href={`/directors/${movie.Director.Name}`} className='btn btn-warning'>More info</a>
       </Card.Text>
         <div className='movie-description'>
           <span className='label'>Description:</span>
@@ -55,9 +53,7 @@ componentDidMount() {
           <span className='label'>Genre:</span>
           <span className='value'>{movie.Genre.Name + ' ' + movie.Genre.Description}</span>
           <Card.Text className="text-style">Genre: {movie.Genre.Name}
-        <Link to={`/genres/${movie.Genre.Name}`}>
-          <button variant="link">More info</button>
-        </Link>
+          <a href={`/genres/${movie.Genre.Name}`} className='btn btn-warning'>More info</a>
       </Card.Text>
         </div>
         <div className="movie-actors">
@@ -65,7 +61,7 @@ componentDidMount() {
           <span className="value">{movie.Actors}</span>
         </div>
         <div className="movie-button-div">
-        <Button onClick={() => { onBackClick(null); }}>Back</Button>
+        <a href onClick={() => { onBackClick(null); }} className='btn btn-warning'>Back</a>
         </div>
       </div>
     );
@@ -75,7 +71,7 @@ MovieView.propTypes = {
   movie: PropTypes.shape({
     Title: PropTypes.string.isRequired,
     Description: PropTypes.string.isRequired,
-    Imageath: PropTypes.string.isRequired
+    Imagepath: PropTypes.string.isRequired
   }).isRequired,
   onBackClick: PropTypes.func.isRequired
 };

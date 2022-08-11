@@ -13,7 +13,7 @@ import { RegistrationView } from '../registration-view/registration-view';
 import { DirectorView } from '../director-view/director-view';
 import { ProfileView } from '../profile-view/profile-view';
 import { GenreView } from '../genre-view/genre-view';
-import { Link } from "react-router-dom";
+
 
 import './main-view.scss';
 
