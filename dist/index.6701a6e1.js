@@ -45379,7 +45379,7 @@ var _reactBootstrap = require("react-bootstrap");
 var _movieCard = require("../movie-card/movie-card");
 class DirectorView extends _reactDefault.default.Component {
     render() {
-        const { director , handleClick  } = this.props;
+        const { director , goback  } = this.props;
         console.log('director', director);
         return(/*#__PURE__*/ _jsxRuntime.jsxs(_reactBootstrap.Container, {
             className: "mt-5",
@@ -45415,7 +45415,7 @@ class DirectorView extends _reactDefault.default.Component {
                 }),
                 /*#__PURE__*/ _jsxRuntime.jsx("a", {
                     href: true,
-                    onClick: handleClick,
+                    onClick: goback,
                     className: "btn btn-warning",
                     __source: {
                         fileName: "src/components/director-view/director-view.jsx",
