@@ -61,7 +61,8 @@ componentDidMount() {
           <span className="value">{movie.Actors}</span>
         </div>
         <div className="movie-button-div">
-        <a href onClick={() => { onBackClick(null); }} className='btn btn-warning'>Back</a>
+        <a href onClick={() => { onBackClick(null); }} className='btn btn-warning'>Back
+        </a>
         </div>
       </div>
     );
