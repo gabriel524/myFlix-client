@@ -69,6 +69,7 @@ body, html {
   margin-top: 130px;
   position: relative;
 }
+
 .movie-card {
   cursor: pointer;
   transition: all 0.28s;
@@ -91,8 +92,10 @@ body, html {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
-
+.btn-warning {
+  padding-right: 20;
+  width: -1;
+}
 
 
 /*# sourceMappingURL=index.caa67093.css.map */
