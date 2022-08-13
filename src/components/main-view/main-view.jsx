@@ -159,3 +159,4 @@ let mapStateToProps = state => {
 export default connect (mapStateToProps,{setMovies}) (MainView);
 
 
+
