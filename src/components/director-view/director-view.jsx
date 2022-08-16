@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { MovieCard } from '../movie-card/movie-card';
 
 export class DirectorView extends React.Component {
   render() {
