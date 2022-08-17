@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
 
-import { Container, Row, Col, Card, Navbar, Nav, Form, Button, NavDropdown } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button,} from 'react-bootstrap';
 
 
 export function LoginView(props) {
@@ -83,7 +83,7 @@ const handleSubmit = (e) => {
         <div className='button'>
         <div className="mb-3 form-check">
           <input type="checkbox" className="form-check-input" id="exampleCheck1"></input>
-            <label className="form-check-label"><span>Remember Me</span></label>
+            <label className="form-check-label"><span>Keep me login</span></label>
         </div>
       <Button variant="primary" type="submit" onClick={handleSubmit}>
         Submit
@@ -92,8 +92,8 @@ const handleSubmit = (e) => {
     </Form>
     </div>
     </Card.Body>
+    <p className="text">Not Registered?</p>
     <Card.Footer>
-    <p>Not Registered?</p>
       <div className='text'>
           <a className="btn btn-info" href={'/register'}>Sign Up</a></div>
      <Button className="ma-0 col-10 onset-1" variant="link">
