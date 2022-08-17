@@ -66,7 +66,7 @@ export function RegistrationView(props) {
       setValues((prevValues) => {
         return { ...prevValues, emailErr: 'Enter a valid email address.' };
       });
-      isReg = false;
+      isReq = false;
     }
     if (!birthday) {
       setValues((prevValues) => {
@@ -103,7 +103,6 @@ export function RegistrationView(props) {
 
     return (
       <Container className="mt-5">
-      
         <Row className="justify-content-sm-center">
         <Col xs={12} sm={9} md={7} lg={6} xl={5} className="col-xl-8 col-lg-8 col-md-7 col-sm-9 col-12">
           <CardGroup>
@@ -163,14 +162,7 @@ export function RegistrationView(props) {
                       <p className="validation-message">{values.birthdayErr}</p>
                     )}
                   </Form.Group>
-  
-                  <Button
-                    className="mt-3"
-                    type="submit"
-                    variant="success"
-                    onClick={handleSubmit}
-                  >
-                    Submit
+                  <Button className="mt-0" variant="primary" type="submit" onClick={handleSubmit}>Submit
                   </Button>
                 </Form>
               </Card.Body>
