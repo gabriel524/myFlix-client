@@ -166,9 +166,6 @@ export function ProfileView({ movies }) {
         {/* Calling the function that renders the modal to delete the users account */}
         {cancelUserModal()}
 
-        <p></p>
-        <h2>Favourite Movies:</h2>
-
         {/* Calling the function that renders the users favourite movies on the profile page */}
         {renderFavourits()}
 
