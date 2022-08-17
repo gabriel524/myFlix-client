@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-
 import { SET_FILTER, SET_MOVIES, SET_USER, ADD_FAVMOVIE, REM_FAVMOVIE} from '../actions/actions';
 
 function visibilityFilter( state = '', action) {
