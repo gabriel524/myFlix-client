@@ -7,7 +7,7 @@ import {setFilter} from "../../actions/actions";
 function VisibilityFilterInput(props) {
     return <Form.Control onChange={e => props.setFilter(e.target.value)}
     value={props.VisibilityFilter}
-    placeholder='filter' />;
+    placeholder='Search a movie of your choice' />;
 }
 
 
