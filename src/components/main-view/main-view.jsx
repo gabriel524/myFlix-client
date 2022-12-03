@@ -39,16 +39,15 @@ export class MainView extends React.Component {
   }
 
   getMovies(token) {
-    axios
-      .get("https://myflix--movies-app.herokuapp.com/movies", {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        this.props.setMovies(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    axios.get('https://myflix--movies-application1.herokuapp.com/movies', {
+      headers: { Authorization: `Bearer ${token}` }
+    })
+    .then(response => {
+      this.props.setMovies(response.data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 
 
