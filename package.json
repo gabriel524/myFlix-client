@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/gabriel524/myFlix-client/issues"
   },
-  
+  "homepage": "https://github.com/gabriel524/myFlix-client#readme",
   "dependencies": {
     "axios": "^0.27.2",
     "prop-types": "^15.8.1",
