@@ -44647,14 +44647,14 @@ function Navbar({ user  }) {
                 }, void 0, false, {
                     fileName: "src/components/navbar/navbar.jsx",
                     lineNumber: 26,
-                    columnNumber: 11
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Toggle, {
                     "aria-controls": "responsive-navbar-nav"
                 }, void 0, false, {
                     fileName: "src/components/navbar/navbar.jsx",
                     lineNumber: 27,
-                    columnNumber: 11
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Navbar).Collapse, {
                     id: "responsive-navbar-nav",
@@ -44667,8 +44667,8 @@ function Navbar({ user  }) {
                                 children: "Movies"
                             }, void 0, false, {
                                 fileName: "src/components/navbar/navbar.jsx",
-                                lineNumber: 33,
-                                columnNumber: 17
+                                lineNumber: 32,
+                                columnNumber: 15
                             }, this),
                             isAuth() && // <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -44676,15 +44676,16 @@ function Navbar({ user  }) {
                                 children: "Profile"
                             }, void 0, false, {
                                 fileName: "src/components/navbar/navbar.jsx",
-                                lineNumber: 38,
+                                lineNumber: 37,
                                 columnNumber: 15
                             }, this),
-                            isAuth() && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
+                            isAuth() && //<Nav.Link as={Link} to="/" onClick={onLoggedOut}>Logout</Nav.Link>
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
                                 onClick: ()=>onLoggedOut(),
                                 children: "Logout"
                             }, void 0, false, {
                                 fileName: "src/components/navbar/navbar.jsx",
-                                lineNumber: 43,
+                                lineNumber: 42,
                                 columnNumber: 15
                             }, this),
                             !isAuth() && // <Nav.Link href="/">Login</Nav.Link>
@@ -44693,8 +44694,8 @@ function Navbar({ user  }) {
                                 children: "Login"
                             }, void 0, false, {
                                 fileName: "src/components/navbar/navbar.jsx",
-                                lineNumber: 48,
-                                columnNumber: 17
+                                lineNumber: 47,
+                                columnNumber: 15
                             }, this),
                             !isAuth() && // <Nav.Link href="/register">Sign Up</Nav.Link>
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Nav).Link, {
@@ -44703,8 +44704,8 @@ function Navbar({ user  }) {
                                 children: "Sign Up"
                             }, void 0, false, {
                                 fileName: "src/components/navbar/navbar.jsx",
-                                lineNumber: 53,
-                                columnNumber: 17
+                                lineNumber: 52,
+                                columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
@@ -44715,18 +44716,18 @@ function Navbar({ user  }) {
                 }, void 0, false, {
                     fileName: "src/components/navbar/navbar.jsx",
                     lineNumber: 28,
-                    columnNumber: 7
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/navbar/navbar.jsx",
             lineNumber: 25,
-            columnNumber: 9
+            columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "src/components/navbar/navbar.jsx",
         lineNumber: 24,
-        columnNumber: 9
+        columnNumber: 5
     }, this);
 }
 exports.default = Navbar;
