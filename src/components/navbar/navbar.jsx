@@ -1,6 +1,7 @@
 import React from "react";
 import './navbar.scss';
-import { Navbar, Container, Nav} from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 export default function Navbar({ user }) {
 
@@ -28,28 +29,36 @@ export default function Navbar({ user }) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto navbar-elements__style justify-between">
             {isAuth() && (
-              // <Nav.Link as={Link} to={`/`}>Movies</Nav.Link>
-              <Nav.Link href={"/"}>Movies</Nav.Link>
+              <Nav.Link as={Link} to={`/`}>
+                Movies
+              </Nav.Link>
+              //<Nav.Link href={"/"}>Movies</Nav.Link>
             )}
 
             {isAuth() && (
-              // <Nav.Link as={Link} to={`/users/${user}`}>Profile</Nav.Link>
-              <Nav.Link href={`/users/${user}`}>Profile</Nav.Link>
+              <Nav.Link as={Link} to={`/users/${user}`}>
+                Profile
+              </Nav.Link>
+              //<Nav.Link href={`/users/${user}`}>Profile</Nav.Link>
             )}
 
             {isAuth() && (
-              //<Nav.Link as={Link} to="/" onClick={onLoggedOut}>Logout</Nav.Link>
-              <Nav.Link onClick={() => onLoggedOut()}>Logout</Nav.Link>
+              <Nav.Link as={Link} to="/" onClick={onLoggedOut}>
+                Logout
+              </Nav.Link>
+              //<Nav.Link onClick={() => onLoggedOut()}>Logout</Nav.Link>
             )}
 
             {!isAuth() && (
-              // <Nav.Link href="/">Login</Nav.Link>
-              <Nav.Link href={"/"}>Login</Nav.Link>
+              <Nav.Link as={Link} to={`/`}>Login</Nav.Link>
+              //<Nav.Link href={"/"}>Login</Nav.Link>
             )}
 
             {!isAuth() && (
-              // <Nav.Link href="/register">Sign Up</Nav.Link>
-              <Nav.Link href={"/register"} variant="Nav.Link">Sign Up</Nav.Link>
+              <Nav.Link as={Link} to={`/register`}>
+                Sign Up
+              </Nav.Link>
+              //<Nav.Link href={"/register"} variant="Nav.Link">Sign Up</Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
