@@ -62,7 +62,7 @@ export function ProfileView({ movies }) {
 
   // Delete user 
   const deleteUser = () => {
-    setShowModal(false)
+   
     let token = localStorage.getItem('token');
     let user = localStorage.getItem("user");
     axios.delete(`https://myflix--movies-application1.herokuapp.com/users/${user}`,
@@ -177,7 +177,7 @@ export function ProfileView({ movies }) {
             </Button>
 
             {/* This button triggers a modal that's called bellow   */}
-            <Button variant="danger" onClick={handleShow}>
+            <Button variant="danger" onClick={deleteUser}>
               Delete your profile
             </Button>
           </Link>

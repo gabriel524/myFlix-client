@@ -46199,7 +46199,6 @@ function ProfileView({ movies  }) {
     };
     // Delete user 
     const deleteUser = ()=>{
-        setShowModal(false);
         let token = localStorage.getItem("token");
         let user = localStorage.getItem("user");
         (0, _axiosDefault.default).delete(`https://myflix--movies-application1.herokuapp.com/users/${user}`, {
@@ -46451,7 +46450,7 @@ function ProfileView({ movies  }) {
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactBootstrap.Button), {
                                     variant: "danger",
-                                    onClick: handleShow,
+                                    onClick: deleteUser,
                                     children: "Delete your profile"
                                 }, void 0, false, {
                                     fileName: "src/components/profile-view/profile-view.jsx",
