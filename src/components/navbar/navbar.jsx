@@ -2,7 +2,6 @@ import React from "react";
 import './navbar.scss';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-
 export default function Navbar({ user }) {
 
   const onLoggedOut = () => {
