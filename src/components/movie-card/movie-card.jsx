@@ -14,24 +14,31 @@ render() {
 
 
   return (
-  <Container fluid className="movieCardContainer">
-    <Row className="justify-content-md-center">
-      <Col>
-        <CardGroup>
-          <Card className="movieCard mt-12 mb-12  ">
-            <Card.Img variant="top" crossOrigin="anonymous" src={movie.Imagepath}
-            className="poster position-relative" /> {' '}
-            <Card.Body>
-                <Card.Title className="card-title mb-2">{movie.Title}</Card.Title>
-                <Button href={`/movies/${movie._id}`} className="btn btn-info">
-                Open</Button>
-            </Card.Body>
+    <Container fluid className="movieCardContainer">
+      <Row className="justify-content-md-center">
+        <Col>
+          <CardGroup>
+            <Card className="movieCard mt-12 mb-12  ">
+              <Card.Img
+                variant="top"
+                crossOrigin="anonymous"
+                src={movie.Imagepath}
+                className="poster position-relative"
+              />{" "}
+              <Card.Body>
+                <Card.Title className="card-title mb-2">
+                  {movie.Title}
+                </Card.Title>
+                <Link to={`/movies/${movie._id}`}>
+                  <Button className="btn btn-info">Open</Button>
+                </Link>
+              </Card.Body>
             </Card>
-            </CardGroup>
-            </Col>
-          </Row>
-          </Container>
-        );
+          </CardGroup>
+        </Col>
+      </Row>
+    </Container>
+  );
       }
     }
 
