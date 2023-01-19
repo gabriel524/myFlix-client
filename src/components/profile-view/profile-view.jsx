@@ -89,7 +89,7 @@ export function ProfileView({ movies }) {
       return (
         <Row className="justify-content-md-center">
 
-          {favouriteMovies.length === 0 ? (<h5 className="form-text">Add some movies to your list.</h5>) : (
+          {favouriteMovies.length === 0 ? (<h5 className="form-text"></h5>) : (
             favouriteMovies.map((movieId, i) => (
               <Col md={6} lg={4}>
                 <MovieCard key={`${i}-${movieId}`} movie={movies.find(m => m._id == movieId)} />
@@ -134,33 +134,53 @@ export function ProfileView({ movies }) {
       <Container className="cont">
         <h1 className="title">Profile Page</h1>
 
-        
         <Form>
           <Form.Group className="mb-3" controlId="username">
             <Form.Label>Username:</Form.Label>
-            <Form.Control onChange={(e) => setUsername(e.target.value)} value={username} type="text" placeholder="username" />
+            <Form.Control
+              onChange={(e) => setUsername(e.target.value)}
+              value={username}
+              type="text"
+              placeholder="username"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email address</Form.Label>
-            <Form.Control onChange={(e) => setEmail(e.target.value)} value={email} type="email" placeholder="Enter new email" />
+            <Form.Control
+              onChange={(e) => setEmail(e.target.value)}
+              value={email}
+              type="email"
+              placeholder="Enter new email"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="birthday">
             <Form.Label>Birthday:</Form.Label>
-            <Form.Control onChange={(e) => setBirthday(e.target.value)} value={birthday} type="date" placeholder="birthday" />
+            <Form.Control
+              onChange={(e) => setBirthday(e.target.value)}
+              value={birthday}
+              type="date"
+              placeholder="birthday"
+            />
           </Form.Group>
           <Form.Group className="mb-3" controlId="password">
             <Form.Label>Password</Form.Label>
-            <Form.Control onChange={(e) => setPassword(e.target.value)} type="password" value={password} placeholder="Password" />
+            <Form.Control
+              onChange={(e) => setPassword(e.target.value)}
+              type="password"
+              value={password}
+              placeholder="Password"
+            />
           </Form.Group>
+          <Link to="/">
+            <Button variant="success" onClick={updateUser}>
+              Update your profile
+            </Button>
 
-          <Button variant="warning" onClick={updateUser}>
-            Update your profile
-          </Button>
-
-          {/* This button triggers a modal that's called bellow   */}
-          <Button variant="light" onClick={handleShow}>
-            Delete your profile
-          </Button>
+            {/* This button triggers a modal that's called bellow   */}
+            <Button variant="danger" onClick={handleShow}>
+              Delete your profile
+            </Button>
+          </Link>
         </Form>
 
         {/* Calling the function that renders the modal to delete the users account */}
@@ -168,9 +188,8 @@ export function ProfileView({ movies }) {
 
         {/* Calling the function that renders the users favourite movies on the profile page */}
         {renderFavourits()}
-
       </Container>
     </>
-  )
+  );
 }
 
