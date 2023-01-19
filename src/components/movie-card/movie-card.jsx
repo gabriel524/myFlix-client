@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
-import { Card, CardGroup, Container, Col, Row } from 'react-bootstrap';
+import { Link } from "react-router-dom";
+import { Card, CardGroup, Container, Col, Row, Button } from 'react-bootstrap';
 
 import './movie-card.scss';
 
@@ -22,9 +23,8 @@ render() {
             className="poster position-relative" /> {' '}
             <Card.Body>
                 <Card.Title className="card-title mb-2">{movie.Title}</Card.Title>
-                <a href={`/movies/${movie._id}`} className="btn btn-info">
-                Open
-            </a>
+                <Button href={`/movies/${movie._id}`} className="btn btn-info">
+                Open</Button>
             </Card.Body>
             </Card>
             </CardGroup>

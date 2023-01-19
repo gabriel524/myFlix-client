@@ -121,10 +121,10 @@ const handleSubmit = (e) => {
             <p className="text">Not Registered?</p>
             <Card.Footer>
               <div className="text">
-                <Link to="/" className="ms-auto">
-                  <a className="btn btn-info" href={"/register"}>
+                <Link to={`/register`}>
+                  <Button className="btn btn-info">
                     Sign Up
-                  </a>
+                  </Button>
                 </Link>
               </div>
               <Link to="/" className="ms-auto">
